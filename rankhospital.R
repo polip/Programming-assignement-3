@@ -25,7 +25,7 @@ colnames(statedata)[3]<-"heart attack"
 colnames(statedata)[4]<-"heart failure"
 colnames(statedata)[5]<-"pneumonia"
 
-#take only name and 
+#take only name and outcome
 
 statedata<-statedata[,c("Hospital.Name", outcome)]
 
