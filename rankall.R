@@ -1,4 +1,4 @@
-rankall<-function (outcome, num) { 
+rankall<-function (outcome, num="best") { 
         
 ranknum<-as.numeric()
 hospital<-as.character()
@@ -27,6 +27,7 @@ colnames(allstatedata)[5]<-"pneumonia"
 #create list of valid states
 validstate = sort(unique(allstatedata[,2]))
 
+#create a loop
 for (i in seq_along(validstate)) {
         
         #take data for each state
@@ -48,7 +49,7 @@ for (i in seq_along(validstate)) {
         state[i]<-validstate        
         }
 
-#return dataframa with results
+#return dataframe with results
 data.frame(hospital = hospital, state=validstate)
         
 }
